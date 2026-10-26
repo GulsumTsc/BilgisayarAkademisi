@@ -1,0 +1,566 @@
+[
+  {
+    "No": 1,
+    "Baslik": "Parçaları Tanı",
+    "Zorluk": "Kolay",
+    "Aciklama": "İşlemci, bellek ve diğer temel parçalarla tanış. Önce sağlam bir temel oluştur.",
+    "Sorular": [
+      {
+        "Id": 1,
+        "Metin": "Programların komutlarını işleyen bilgisayar parçası hangisidir?",
+        "Secenekler": [
+          "Güç kaynağı (PSU)",
+          "İşlemci (CPU)",
+          "Depolama birimi (SSD)",
+          "Kasa fanı"
+        ],
+        "DogruSecenekIndex": 1,
+        "Aciklama": "İşlemci, program komutlarını yürütür ve hesaplamaları gerçekleştirir."
+      },
+      {
+        "Id": 2,
+        "Metin": "Açık uygulamaların kullandığı verileri geçici olarak hangi parça tutar?",
+        "Secenekler": [
+          "RAM",
+          "SSD",
+          "Anakart pili",
+          "Güç kaynağı"
+        ],
+        "DogruSecenekIndex": 0,
+        "Aciklama": "RAM çalışma belleğidir. Elektrik kesildiğinde içindeki veriler korunmaz."
+      },
+      {
+        "Id": 3,
+        "Metin": "Fotoğraf ve belgelerin bilgisayar kapatıldığında da saklanmasını sağlayan hangisidir?",
+        "Secenekler": [
+          "RAM modülü",
+          "İşlemci önbelleği",
+          "Soğutucu fan",
+          "SSD veya HDD"
+        ],
+        "DogruSecenekIndex": 3,
+        "Aciklama": "SSD ve HDD kalıcı depolama birimleridir. Belgeleri daha sonra açabilmemizi sağlarlar."
+      },
+      {
+        "Id": 4,
+        "Metin": "İşlemci, RAM ve genişleme kartlarının bağlandığı ana devre kartı hangisidir?",
+        "Secenekler": [
+          "Ekran kartı",
+          "Ses kartı",
+          "Anakart",
+          "Ağ kartı"
+        ],
+        "DogruSecenekIndex": 2,
+        "Aciklama": "Anakart, bileşenleri bir araya getirir ve aralarındaki iletişime olanak sağlar."
+      },
+      {
+        "Id": 5,
+        "Metin": "Şebeke elektriğini bilgisayar parçalarının kullanabileceği elektrik gücüne dönüştüren hangisidir?",
+        "Secenekler": [
+          "İşlemci soğutucusu",
+          "Güç kaynağı",
+          "RAM modülü",
+          "Depolama birimi"
+        ],
+        "DogruSecenekIndex": 1,
+        "Aciklama": "Güç kaynağı, bileşenlerin ihtiyaç duyduğu elektrik beslemesini sağlar."
+      },
+      {
+        "Id": 6,
+        "Metin": "Görüntü ve grafik hesaplamalarında özellikle hangi bileşen görev alır?",
+        "Secenekler": [
+          "Grafik işlemci (GPU)",
+          "Güç kaynağı (PSU)",
+          "Anakart pili",
+          "Kasa fanı"
+        ],
+        "DogruSecenekIndex": 0,
+        "Aciklama": "GPU grafik işlemlerini yapar. Ayrı bir ekran kartında veya işlemciye entegre olarak bulunabilir."
+      },
+      {
+        "Id": 7,
+        "Metin": "İşlemcinin ısısını uzaklaştırmaya yardımcı olan parça grubu hangisidir?",
+        "Secenekler": [
+          "SSD ve veri kablosu",
+          "RAM ve bellek yuvası",
+          "Klavye ve fare",
+          "Soğutucu ve fan"
+        ],
+        "DogruSecenekIndex": 3,
+        "Aciklama": "Soğutucu ısıyı dağıtır, fan da hava akışı oluşturur. Böylece işlemcinin soğutulmasına yardımcı olurlar."
+      },
+      {
+        "Id": 8,
+        "Metin": "Masaüstü bilgisayarda RAM modülü genellikle nereye yerleştirilir?",
+        "Secenekler": [
+          "Anakartın işlemci soketine",
+          "Güç kaynağının içine",
+          "Anakarttaki bellek yuvasına",
+          "Kasanın USB girişine"
+        ],
+        "DogruSecenekIndex": 2,
+        "Aciklama": "RAM, anakart üzerindeki uyumlu bellek yuvasına takılır. İşlemci soketi farklı bir parçaya aittir."
+      },
+      {
+        "Id": 9,
+        "Metin": "İşlemcinin anakart üzerinde yerleştirildiği bölümün adı nedir?",
+        "Secenekler": [
+          "RAM yuvası",
+          "İşlemci soketi",
+          "SATA bağlantısı",
+          "USB girişi"
+        ],
+        "DogruSecenekIndex": 1,
+        "Aciklama": "İşlemci kendisiyle uyumlu sokete yerleştirilir. Her işlemci her soketle uyumlu değildir."
+      },
+      {
+        "Id": 10,
+        "Metin": "Aşağıdakilerden hangisi bir giriş birimidir?",
+        "Secenekler": [
+          "Klavye",
+          "Monitör",
+          "Hoparlör",
+          "Yazıcı"
+        ],
+        "DogruSecenekIndex": 0,
+        "Aciklama": "Klavye, bilgisayara veri ve komut girmek için kullanılır. Diğer seçenekler çıktı üretir."
+      },
+      {
+        "Id": 11,
+        "Metin": "Bilgisayarın oluşturduğu görüntüyü kullanıcıya gösteren birim hangisidir?",
+        "Secenekler": [
+          "Mikrofon",
+          "Fare",
+          "Web kamerası",
+          "Monitör"
+        ],
+        "DogruSecenekIndex": 3,
+        "Aciklama": "Monitör bir çıkış birimidir. Mikrofon ve kamera bilgisayara veri gönderir."
+      },
+      {
+        "Id": 12,
+        "Metin": "Bilgisayarın iç parçalarını barındıran ve korumaya yardımcı olan yapı hangisidir?",
+        "Secenekler": [
+          "Anakart kutusu",
+          "İşlemci soketi",
+          "Bilgisayar kasası",
+          "Monitör ayağı"
+        ],
+        "DogruSecenekIndex": 2,
+        "Aciklama": "Kasa; anakart, güç kaynağı ve diğer iç bileşenler için yerleşim alanı sağlar."
+      },
+      {
+        "Id": 13,
+        "Metin": "Aşağıdaki eşleştirmelerden hangisi doğrudur?",
+        "Secenekler": [
+          "RAM: güç dağıtımı, SSD: soğutma",
+          "RAM: geçici bellek, SSD: kalıcı depolama",
+          "RAM: kalıcı depolama, SSD: geçici bellek",
+          "RAM: görüntü çıkışı, SSD: ses girişi"
+        ],
+        "DogruSecenekIndex": 1,
+        "Aciklama": "RAM çalışan uygulamalara çalışma alanı sağlar. SSD ise işletim sistemini ve dosyaları kalıcı olarak saklar."
+      },
+      {
+        "Id": 14,
+        "Metin": "Bilgisayara sesimizi aktarmak için hangi aygıt kullanılır?",
+        "Secenekler": [
+          "Mikrofon",
+          "Hoparlör",
+          "Monitör",
+          "Yazıcı"
+        ],
+        "DogruSecenekIndex": 0,
+        "Aciklama": "Mikrofon sesi bilgisayara giriş olarak aktarır. Hoparlör ise bilgisayardan gelen sesi dışarı verir."
+      },
+      {
+        "Id": 15,
+        "Metin": "Bir RAM modülü yuvaya oturmuyorsa en uygun davranış hangisidir?",
+        "Secenekler": [
+          "Modülü daha fazla kuvvetle bastırmak",
+          "Modülün çentiğini keserek genişletmek",
+          "Çalışan bilgisayarda başka yuvaya zorlamak",
+          "Uyumluluğu ve çentik yönünü kontrol etmek"
+        ],
+        "DogruSecenekIndex": 3,
+        "Aciklama": "RAM nesli ve çentik yönü uyumlu olmalıdır. Zorlamak modüle veya anakarta zarar verebilir."
+      }
+    ]
+  },
+  {
+    "No": 2,
+    "Baslik": "Bağlantıları Keşfet",
+    "Zorluk": "Orta",
+    "Aciklama": "Parçaların nasıl bir araya geldiğini öğren. Uyumluluk ve bağlantı bilgini geliştir.",
+    "Sorular": [
+      {
+        "Id": 16,
+        "Metin": "DDR4 bellek destekleyen bir anakart için RAM seçerken ne yapılmalıdır?",
+        "Secenekler": [
+          "Aynı kapasitedeki bir DDR5 modül seçilmelidir.",
+          "Yalnızca modülün MHz değerine göre karar verilmelidir.",
+          "Anakartın desteklediği DDR4 bellek seçilmelidir.",
+          "Masaüstü yuvasına herhangi bir dizüstü RAM’i seçilmelidir."
+        ],
+        "DogruSecenekIndex": 2,
+        "Aciklama": "DDR4 ve DDR5 birbirinin yerine takılamaz. Anakartın bellek türü, kapasite ve hız desteği kontrol edilmelidir."
+      },
+      {
+        "Id": 17,
+        "Metin": "Yeni bir işlemcinin anakarta uyumluluğunu belirlemek için en güvenilir kontrol hangisidir?",
+        "Secenekler": [
+          "Yalnızca işlemcinin soket adına bakmak",
+          "Anakartın işlemci destek listesi ve gerekli BIOS sürümü",
+          "Yalnızca işlemci çekirdek sayısını karşılaştırmak",
+          "Yalnızca işlemcinin güç tüketimini karşılaştırmak"
+        ],
+        "DogruSecenekIndex": 1,
+        "Aciklama": "Soket uyumu tek başına yeterli değildir. Üreticinin işlemci destek listesi ve gereken BIOS sürümü de incelenmelidir."
+      },
+      {
+        "Id": 18,
+        "Metin": "Standart masaüstü sistemde 2,5 inç SATA SSD için hangi iki bağlantı gerekir?",
+        "Secenekler": [
+          "SATA veri bağlantısı ve SATA güç bağlantısı",
+          "PCIe güç bağlantısı ve HDMI bağlantısı",
+          "Yalnızca bir SATA veri bağlantısı",
+          "USB-C görüntü bağlantısı ve Ethernet bağlantısı"
+        ],
+        "DogruSecenekIndex": 0,
+        "Aciklama": "SATA veri kablosu SSD ile anakart arasında iletişim sağlar; güç kablosu SSD'ye güç kaynağından enerji getirir."
+      },
+      {
+        "Id": 19,
+        "Metin": "İki RAM modülüyle çift kanal kullanmak isteyen öğrenci yuvaları nasıl seçmelidir?",
+        "Secenekler": [
+          "Her modelde mutlaka yan yana ilk iki yuvayı kullanmalıdır.",
+          "Yalnızca modüllerin kapasitesine bakıp rastgele yuva seçmelidir.",
+          "Bir modülü DIMM, diğerini PCIe yuvasına takmalıdır.",
+          "Anakart kılavuzunda önerilen yuva çiftini kullanmalıdır."
+        ],
+        "DogruSecenekIndex": 3,
+        "Aciklama": "Çift kanal için önerilen yuvalar anakarta göre değişir. Kesin yerleşim anakart kılavuzundan öğrenilir."
+      },
+      {
+        "Id": 20,
+        "Metin": "Bir SSD üzerinde M.2 yazması hangi bilgiyi tek başına garanti etmez?",
+        "Secenekler": [
+          "SSD’nin RAM modülü olmadığını",
+          "Ürünün M.2 biçiminde tasarlandığını",
+          "SSD’nin her M.2 yuvada çalışacağını",
+          "Parça seçiminde teknik özelliklerin önemli olduğunu"
+        ],
+        "DogruSecenekIndex": 2,
+        "Aciklama": "M.2 bir fiziksel biçimdir. SSD ve yuvanın SATA veya PCIe/NVMe desteği ile boyut uyumluluğu ayrıca kontrol edilmelidir."
+      },
+      {
+        "Id": 21,
+        "Metin": "Masaüstü bilgisayarda ayrı ekran kartı genellikle hangi yuvaya takılır?",
+        "Secenekler": [
+          "DIMM bellek yuvasına",
+          "Uygun PCIe x16 yuvasına",
+          "M.2 depolama yuvasına",
+          "SATA veri bağlantısına"
+        ],
+        "DogruSecenekIndex": 1,
+        "Aciklama": "Ayrı ekran kartları genellikle anakarttaki uygun PCIe x16 yuvasına takılır. Kartın güç ihtiyacı da kontrol edilmelidir."
+      },
+      {
+        "Id": 22,
+        "Metin": "Termal macunun işlemci ile soğutucu arasındaki temel görevi nedir?",
+        "Secenekler": [
+          "Yüzeydeki küçük boşlukları doldurarak ısı aktarımına yardımcı olmak",
+          "İşlemcinin elektriksel temaslarını birleştirmek",
+          "İşlemci soketini mekanik olarak kilitlemek",
+          "İşlemcinin çalışma frekansını doğrudan artırmak"
+        ],
+        "DogruSecenekIndex": 0,
+        "Aciklama": "Termal macun yüzeyler arasındaki çok küçük boşlukların etkisini azaltır. Soğutucunun doğru montajının yerini tutmaz."
+      },
+      {
+        "Id": 23,
+        "Metin": "Yeni bir ekran kartı seçerken kasayla ilgili hangi ölçü kontrol edilmelidir?",
+        "Secenekler": [
+          "Yalnızca kartın görüntü çıkışı sayısı",
+          "Yalnızca ekran kartının bellek kapasitesi",
+          "Yalnızca kartın PCIe nesli",
+          "Kartın uzunluğu ve kalınlığı için yeterli alan"
+        ],
+        "DogruSecenekIndex": 3,
+        "Aciklama": "Ekran kartı kasaya fiziksel olarak sığmalıdır. Anakart yuvası ve güç bağlantıları da ayrıca uyumlu olmalıdır."
+      },
+      {
+        "Id": 24,
+        "Metin": "Kasa fanını takarken hava akışının yönü nasıl belirlenmelidir?",
+        "Secenekler": [
+          "Fanın RGB ışıklarının rengine göre",
+          "Yalnızca fan güç kablosunun uzunluğuna göre",
+          "Fan üzerindeki yön işareti veya üretici bilgisiyle",
+          "Fanın üretici bilgisi yerine vida rengini karşılaştırarak"
+        ],
+        "DogruSecenekIndex": 2,
+        "Aciklama": "Fanlarda hava akışını gösteren oklar bulunabilir. İşaret yoksa üretici belgesi kullanılmalı ve kasanın genel hava akışı planlanmalıdır."
+      },
+      {
+        "Id": 25,
+        "Metin": "Bilgisayarda çok sayıda uygulama açıkken RAM sürekli doluyorsa hangi yükseltme doğrudan bu sınırlamayı hedefler?",
+        "Secenekler": [
+          "Yalnızca depolama kapasitesini artırmak",
+          "Uyumlu RAM kapasitesini artırmak",
+          "Aynı kapasitede farklı marka SSD kullanmak",
+          "Monitörün yenileme hızını artırmak"
+        ],
+        "DogruSecenekIndex": 1,
+        "Aciklama": "Yetersiz RAM, aynı anda çalışan uygulamaları sınırlayabilir. Kapasite artırımı öncesinde anakart desteği kontrol edilmelidir."
+      },
+      {
+        "Id": 26,
+        "Metin": "İşletim sistemi yüklenmeden önce temel donanım başlangıcını hangi yazılım yürütür?",
+        "Secenekler": [
+          "BIOS/UEFI",
+          "İşletim sisteminin masaüstü kabuğu",
+          "Ekran kartının Windows sürücüsü",
+          "Disk birleştirme uygulaması"
+        ],
+        "DogruSecenekIndex": 0,
+        "Aciklama": "Anakartın BIOS/UEFI yazılımı donanımın ilk başlangıcında görev alır ve işletim sisteminin başlatılmasına yardımcı olur."
+      },
+      {
+        "Id": 27,
+        "Metin": "PSU seçerken yalnızca üzerinde yazan watt değerine bakmak neden yeterli değildir?",
+        "Secenekler": [
+          "Yüksek watt değerinin her modelde aynı kablo uyumunu garanti etmesi",
+          "PSU’nun yalnızca ekran kartına güç vermesi",
+          "Watt değerinin tüm bağlantı türlerini tek başına belirtmesi",
+          "Bağlantılar, kalite ve sistemin güç ihtiyacı da önemlidir."
+        ],
+        "DogruSecenekIndex": 3,
+        "Aciklama": "PSU; sistemin güç ihtiyacına, gerekli bağlantılara ve uygun kalite özelliklerine göre seçilmelidir."
+      },
+      {
+        "Id": 28,
+        "Metin": "Masaüstü bilgisayarı Ethernet kablosuyla yerel ağa bağlamak için hangi bağlantı kullanılır?",
+        "Secenekler": [
+          "HDMI bağlantısı",
+          "SATA bağlantısı",
+          "RJ45 Ethernet bağlantısı",
+          "3,5 mm ses bağlantısı"
+        ],
+        "DogruSecenekIndex": 2,
+        "Aciklama": "RJ45 biçimindeki Ethernet bağlantısı kablolu ağ için kullanılır. HDMI görüntü, SATA ise depolama bağlantısıdır."
+      },
+      {
+        "Id": 29,
+        "Metin": "Bilgisayara RAM takmadan önce hangi hazırlık yapılmalıdır?",
+        "Secenekler": [
+          "Yalnızca ekranı kapatıp sistem çalışırken takmak",
+          "Bilgisayarı kapatıp güç bağlantısını kesmek ve statik elektriğe karşı önlem almak",
+          "Uyumsuz belleği BIOS ayarıyla fiziksel yuvaya uydurmak",
+          "Statik elektrik önlemi yerine parçayı metal uçlarından tutmak"
+        ],
+        "DogruSecenekIndex": 1,
+        "Aciklama": "İç bileşenlerle çalışmadan önce güç bağlantısı kesilmeli ve uygun elektrostatik boşalma önlemleri alınmalıdır."
+      },
+      {
+        "Id": 30,
+        "Metin": "Parça montajında modeline özel doğru bağlantı ve yerleşim bilgisi için ilk başvuru kaynağı hangisidir?",
+        "Secenekler": [
+          "Anakartın ve ilgili parçanın üretici kılavuzu",
+          "Benzer görünen başka bir modelin montaj videosu",
+          "Yalnızca mağazadaki genel ürün fotoğrafı",
+          "Yalnızca parçanın kutusundaki pazarlama açıklaması"
+        ],
+        "DogruSecenekIndex": 0,
+        "Aciklama": "Bağlantılar ve desteklenen parçalar modele göre değişir. Üreticinin o modele ait kılavuzu esas alınmalıdır."
+      }
+    ]
+  },
+  {
+    "No": 3,
+    "Baslik": "Sorunları Çöz",
+    "Zorluk": "Zor",
+    "Aciklama": "Gerçekçi durumları değerlendir. Belirtilerden yola çıkarak doğru kontrol adımını seç.",
+    "Sorular": [
+      {
+        "Id": 31,
+        "Metin": "Yeni RAM takıldıktan hemen sonra bilgisayar görüntü vermiyor. Güç kesildikten sonra ilk mantıklı kontrol hangisidir?",
+        "Secenekler": [
+          "RAM yerleşimini incelemeden işletim sistemini yeniden kurmak",
+          "Belleği test etmeden doğrudan depolama birimini değiştirmek",
+          "Uyumluluk kontrolü yerine rastgele bellek hız ayarlarını artırmak",
+          "RAM’in uyumunu ve tam oturmasını kontrol edip kılavuza göre tek modülle denemek"
+        ],
+        "DogruSecenekIndex": 3,
+        "Aciklama": "Son değişiklik RAM olduğundan öncelikle uyum ve yerleşim incelenir. Tek modülle denemek sorunu daraltabilir; kesin arıza teşhisi için ek test gerekebilir."
+      },
+      {
+        "Id": 32,
+        "Metin": "Yeni işlemci sokete uyuyor ancak sistem açılmıyor. Anakart destek listesi bu işlemci için daha yeni BIOS istiyor. En uygun yaklaşım hangisidir?",
+        "Secenekler": [
+          "Soket uyduğu için BIOS desteğini kontrol etmeye gerek olmadığını varsaymak",
+          "İşlemci desteği yerine yalnızca RAM kapasitesini artırmak",
+          "Üreticinin desteklediği yöntemle gereken BIOS sürümüne geçmek",
+          "Anakart modelini doğrulamadan başka modele ait BIOS yüklemek"
+        ],
+        "DogruSecenekIndex": 2,
+        "Aciklama": "Fiziksel soket uyumu BIOS desteğini garanti etmez. Güncelleme yöntemi ve gerekli sürüm anakart üreticisinden doğrulanmalıdır."
+      },
+      {
+        "Id": 33,
+        "Metin": "Sistem açılıyor fakat ayrı ekran kartı takıldıktan sonra görüntü gelmiyor. İlk basit kontrol hangisidir?",
+        "Secenekler": [
+          "Bağlantıları incelemeden işletim sistemini yeniden kurmak",
+          "Monitör girişini ve kablonun ekran kartının uygun çıkışına bağlı olduğunu kontrol etmek",
+          "Ekranın girişini incelemeden depolama birimini biçimlendirmek",
+          "Kartın bozuk olduğuna karar verip kontrol yapmadan değiştirmek"
+        ],
+        "DogruSecenekIndex": 1,
+        "Aciklama": "Önce ekranın seçili girişi ve kablo bağlantısı kontrol edilir. Anakart görüntü çıkışları, kullanılan işlemcide grafik birimi yoksa çalışmayabilir."
+      },
+      {
+        "Id": 34,
+        "Metin": "İşlemci soğutucusu değiştirildikten sonra sıcaklık hızla yükseliyor. Öncelikle hangi grup kontrol edilmelidir?",
+        "Secenekler": [
+          "Soğutucunun oturması, koruyucu filmin çıkarılması, termal arayüz ve fan/pompa bağlantısı",
+          "Montajı incelemeden yalnızca işletim sistemini yeniden kurmak",
+          "Soğutmayı incelemek yerine işlemci güç sınırını yükseltmek",
+          "Sıcaklık ölçümünü yok sayıp yük testini uzun süre sürdürmek"
+        ],
+        "DogruSecenekIndex": 0,
+        "Aciklama": "Sorun değişiklikten sonra başladığı için soğutucu montajı ve çalışması incelenir. Parçaya uygun üretici talimatları izlenmelidir."
+      },
+      {
+        "Id": 35,
+        "Metin": "Sistem diski UEFI ekranında görünüyor ancak “önyüklenebilir aygıt yok” uyarısı alınıyor. Hangisi uygun bir kontroldür?",
+        "Secenekler": [
+          "Disk algılandığı için önyükleyicinin kesin sağlam olduğunu kabul etmek",
+          "Önyükleme sırasını kontrol etmeden hemen RAM değiştirmek",
+          "Sistemi incelemeden diski biçimlendirip verileri silmek",
+          "Önyükleme sırasını ve diskte geçerli işletim sistemi/önyükleyici bulunmasını kontrol etmek"
+        ],
+        "DogruSecenekIndex": 3,
+        "Aciklama": "Diskin algılanması, içindeki işletim sisteminin başlatılabilir olduğunu garanti etmez. Önyükleme kaydı, sıra ve kurulum biçimi incelenmelidir."
+      },
+      {
+        "Id": 36,
+        "Metin": "Yeni 2,5 inç SATA SSD sistemde hiç görünmüyor. Güç kesildikten sonra hangi kontrol en doğrudan ilgilidir?",
+        "Secenekler": [
+          "Fiziksel bağlantıları incelemeden diski kesin arızalı kabul etmek",
+          "Diskin BIOS’ta algılanmasını kontrol etmeden yalnızca Windows bölüm harfi aramak",
+          "SATA veri ve güç bağlantılarını kontrol etmek, uygun kablo/portla denemek",
+          "SATA diskin görünmesini sağlamak için RAM hızını artırmak"
+        ],
+        "DogruSecenekIndex": 2,
+        "Aciklama": "Bu SSD için hem veri hem güç bağlantısı gerekir. Bağlantı ve kablo kontrolleri, daha ileri tanıdan önce yapılabilir."
+      },
+      {
+        "Id": 37,
+        "Metin": "M.2 SSD takılınca bazı SATA bağlantıları devre dışı kaldı. Anakart kılavuzunda bu yuvaların kaynak paylaştığı yazıyor. Ne yapılmalıdır?",
+        "Secenekler": [
+          "Paylaşım bilgisini yok sayıp tüm SATA diskleri arızalı kabul etmek",
+          "Kılavuzdaki paylaşım tablosuna göre kullanılabilir SATA portuna geçmek",
+          "SATA bağlantılarını etkinleştirmek için yalnızca RAM yuvalarını değiştirmek",
+          "Aynı devre dışı portta farklı diskleri tekrar tekrar denemek"
+        ],
+        "DogruSecenekIndex": 1,
+        "Aciklama": "Bazı anakartlarda M.2 ve SATA bağlantıları kaynak paylaşır. Bu durumda üreticinin belirttiği kullanılabilir portlar seçilmelidir."
+      },
+      {
+        "Id": 38,
+        "Metin": "Yüksek güç isteyen yeni ekran kartından sonra yalnızca ağır yükte kapanma yaşanıyor. PSU açısından hangi inceleme uygundur?",
+        "Secenekler": [
+          "Toplam güç ihtiyacını, PSU kapasitesini ve gerekli kart güç bağlantılarını kontrol etmek",
+          "Yük altında kapanmanın kesinlikle SSD kapasitesinden olduğunu varsaymak",
+          "Gerekli güç bağlantılarını kontrol etmeden yalnızca Windows temasını değiştirmek",
+          "Her PSU’nun watt değeri yeterliyse tüm kabloların da uyumlu olduğunu varsaymak"
+        ],
+        "DogruSecenekIndex": 0,
+        "Aciklama": "Güç ihtiyacı ve bağlantılar olası nedenler arasındadır; sıcaklık gibi diğer nedenler de incelenmelidir. PSU’nun içi açılmamalıdır."
+      },
+      {
+        "Id": 39,
+        "Metin": "İki RAM takılı olduğu hâlde beklenen çift kanal düzeni oluşmuyor. İlk kontrol ne olmalıdır?",
+        "Secenekler": [
+          "Yalnızca toplam RAM kapasitesini görüp kanal düzenini doğru kabul etmek",
+          "Bellek yerleşimini kontrol etmeden SSD bağlantısını değiştirmek",
+          "İki modül takılıysa her platformda çift kanalın kesin çalıştığını varsaymak",
+          "Modüllerin kılavuzda önerilen yuvalarda ve uyumlu yapılandırmada olması"
+        ],
+        "DogruSecenekIndex": 3,
+        "Aciklama": "Bellek kanalı düzeni yuvalara ve platform desteğine bağlıdır. Yerleşim ve uyum, anakart kılavuzuna göre doğrulanmalıdır."
+      },
+      {
+        "Id": 40,
+        "Metin": "Anakartın tek M.2 yuvası yalnızca SATA destekliyor. Kullanıcı PCIe/NVMe M.2 SSD almak istiyor. Hangi sonuç doğrudur?",
+        "Secenekler": [
+          "M.2 biçimindeki her SSD’nin bu yuvada kesin çalışacağını varsaymak",
+          "BIOS’taki önyükleme sırasının donanıma NVMe desteği eklediğini varsaymak",
+          "Fiziksel biçim benzer olsa da bu yuvanın NVMe desteği yoktur.",
+          "SSD’yi biçimlendirmenin SATA yuvasını PCIe yuvaya dönüştürdüğünü varsaymak"
+        ],
+        "DogruSecenekIndex": 2,
+        "Aciklama": "M.2 biçimi tek başına uyum anlamına gelmez. Yuvanın ve sürücünün desteklediği bağlantı teknolojileri eşleşmelidir."
+      },
+      {
+        "Id": 41,
+        "Metin": "Anakartta CPU güç girişi için EPS, ekran kartında PCIe güç bağlantısı belirtiliyor. Benzer görünen kablolar için ne yapılmalıdır?",
+        "Secenekler": [
+          "Fişlerin görünüşü benziyorsa işaretleri kontrol etmeden takılmalıdır.",
+          "PSU ve parça kılavuzlarına göre etiketli doğru kablolar kullanılmalıdır.",
+          "Kablo üzerindeki etiket yerine yalnızca kablo rengine bakılmalıdır.",
+          "Farklı bir modüler PSU’dan kalan kablo model uyumu aranmadan kullanılmalıdır."
+        ],
+        "DogruSecenekIndex": 1,
+        "Aciklama": "EPS/CPU ve PCIe/GPU bağlantıları birbirinin yerine varsayılmamalıdır. Modüler PSU kablolarında da üreticinin model uyumu esas alınmalıdır."
+      },
+      {
+        "Id": 42,
+        "Metin": "Sistemde bellek hataları başladı. Hangi test yaklaşımı sorunun kaynağını daraltmaya yardımcı olur?",
+        "Secenekler": [
+          "Varsayılan ayarlarda, modülleri kılavuza uygun biçimde tek tek bellek testiyle denemek",
+          "Tüm bellek ayarlarını aynı anda artırıp hangi değişikliğin etkili olduğunu kaydetmemek",
+          "Tek bir uygulama hatasını görüp tüm RAM modüllerini kesin arızalı kabul etmek",
+          "Bellek testi yerine yalnızca diskte boş alan olup olmadığını kontrol etmek"
+        ],
+        "DogruSecenekIndex": 0,
+        "Aciklama": "Kontrollü biçimde tek değişkeni denemek modül, yuva veya ayar kaynaklı olasılıkları ayırmaya yardımcı olur. Bir test tek başına tüm nedenleri dışlamaz."
+      },
+      {
+        "Id": 43,
+        "Metin": "Anakartta DRAM tanı ışığı yanıyor. En doğru yorum hangisidir?",
+        "Secenekler": [
+          "RAM’in tek olası arızalı bileşen olduğu ve kesin değişmesi gerektiği",
+          "Bellek kontrolü yapmadan işletim sisteminin tek neden olduğu",
+          "Işık yandığı için işlemcinin tüm bellek işlevlerinin kesin sağlam olduğu",
+          "Bellek başlangıcına ilişkin kontroller gerekir; tek başına RAM’in kesin bozuk olduğunu kanıtlamaz."
+        ],
+        "DogruSecenekIndex": 3,
+        "Aciklama": "Tanı ışıkları sorunu daraltmaya yardımcı olur. Anlamı modele göre kılavuzdan doğrulanır; uyum, yerleşim ve diğer etkenler de incelenir."
+      },
+      {
+        "Id": 44,
+        "Metin": "Bilgisayar kasa dışında çalışıyor fakat kasaya monte edilince açılmıyor. Güç kesildikten sonra hangi montaj ayrıntısı incelenmelidir?",
+        "Secenekler": [
+          "Montajı incelemeden işletim sistemini yeniden kurmak",
+          "Kasa içi teması kontrol etmeden aynı diski biçimlendirmek",
+          "Anakart yükselticilerinin doğru deliklerde olması ve istenmeyen metal temas bulunmaması",
+          "Kasaya yerleştirmenin RAM kapasitesini azalttığını varsaymak"
+        ],
+        "DogruSecenekIndex": 2,
+        "Aciklama": "Yanlış konumdaki yükseltici veya istenmeyen metal teması kısa devreye yol açabilir. Montaj, anakart ve kasa kılavuzlarına göre kontrol edilmelidir."
+      },
+      {
+        "Id": 45,
+        "Metin": "Bir donanım arızasını araştırırken hangi yöntem en güvenilir ilerlemeyi sağlar?",
+        "Secenekler": [
+          "Birden fazla parçayı aynı anda değiştirip sonuca bakmak",
+          "Belirtiyi kaydetmek, güvenli temel kontrolleri yapmak ve tek değişkeni değiştirerek test etmek",
+          "Tek bir belirtiyle diğer olasılıkları test etmeden kesin karar vermek",
+          "Benzer bir bilgisayardaki arızayı bu sistem için doğrudan kesin tanı saymak"
+        ],
+        "DogruSecenekIndex": 1,
+        "Aciklama": "Adım adım ve kayıtlı test yapmak hangi değişikliğin sonucu etkilediğini görmeyi sağlar. Önce güvenli ve basit kontrollerle başlanır."
+      }
+    ]
+  }
+]

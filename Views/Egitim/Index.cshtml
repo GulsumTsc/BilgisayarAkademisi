@@ -1,0 +1,104 @@
+@model SoruEkraniViewModel
+@{
+    ViewData["Title"] = $"{Model.EtapNo}. Kısım · {Model.EtapBasligi}";
+    string[] harfler = { "A", "B", "C", "D" };
+}
+<div class="page-intro">
+    <div><span class="eyebrow">BİLGİSAYAR DONANIMI</span><h1>Öğrenme yolculuğun</h1><p>Küçük adımlarla ilerle, her soruda yeni bir şey keşfet.</p></div>
+    <span class="intro-caption"><partial name="_Icon" model='@("layers")' /> 3 etap · 45 soru</span>
+</div>
+<div class="learning-layout">
+    <partial name="_Etaplar" model="Model" />
+    <section class="lesson-area" aria-label="Soru etkinliği">
+        <div class="lesson-topline">
+            <span class="lesson-breadcrumb">@Model.EtapNo. Kısım <span>/</span> <strong>@Model.EtapBasligi</strong></span>
+            <span class="difficulty difficulty-@Model.EtapNo">@Model.Zorluk</span>
+        </div>
+        @if (Model.Tamamlandi)
+        {
+            <div class="question-card result-card">
+                <div class="result-symbol"><partial name="_Icon" model='@("trophy")' /></div>
+                <span class="eyebrow">@Model.EtapNo. KISIM TAMAMLANDI</span>
+                <h2>@(Model.EtapNo == 3 ? "Öğrenme rotanı tamamladın!" : "Bir adım daha ilerledin!")</h2>
+                <p>@Model.EtapBasligi etabındaki 15 soruyu tamamladın.<br />@(Model.EtapNo == 3 ? "Üç etabı da bitirdin. Emeğine sağlık!" : "Bir sonraki etap artık seni bekliyor.")</p>
+                <div class="result-stats"><div><strong>@Model.DogruSayisi<span>/15</span></strong><span>doğru cevap</span></div><div><strong>@(15 - Model.DogruSayisi)</strong><span>yanlış cevap</span></div><div><strong>@Model.Can<span>/5</span></strong><span>kalan can</span></div></div>
+                @if (Model.EtapNo < 3)
+                {
+                    <a class="button button-primary" asp-controller="Egitim" asp-action="Index" asp-route-etap="@(Model.EtapNo + 1)">@(Model.EtapNo + 1). kısma geç <partial name="_Icon" model='@("arrow")' /></a>
+                }
+                else
+                {
+                    <a class="button button-primary" asp-controller="Home" asp-action="Index">Öğrenme rotasına dön <partial name="_Icon" model='@("arrow")' /></a>
+                }
+                <form asp-controller="Egitim" asp-action="YenidenBaslat" method="post" class="retry-completed">
+                    <input type="hidden" name="etapNo" value="@Model.EtapNo" />
+                    <input type="hidden" name="denemeId" value="@Model.DenemeId" />
+                    <button class="button button-secondary" type="submit">Bu etabı tekrar çöz</button>
+                </form>
+            </div>
+        }
+        else
+        {
+            <div class="lesson-status"><div><span class="eyebrow">CANLARIN</span><partial name="_Kalpler" model="Model.Can" /></div><div class="correct-count"><partial name="_Icon" model='@("check")' /><strong>@Model.DogruSayisi</strong> doğru</div></div>
+            <div class="lesson-progress">
+                <div class="progress-caption"><span>Etap ilerlemen</span><strong>@Model.CevaplananSoru / @Model.ToplamSoru</strong></div>
+                <div class="progress-segments" role="progressbar" aria-label="Cevaplanan soru sayısı" aria-valuemin="0" aria-valuemax="15" aria-valuenow="@Model.CevaplananSoru">
+                    @for (int i = 0; i < 15; i++) { <span class="@(i < Model.CevaplananSoru ? "filled" : "")"></span> }
+                </div>
+            </div>
+            <div class="question-card">
+                <div class="question-heading"><span class="question-number">SORU @Model.SoruNumarasi.ToString("00") <span>/ 15</span></span><span class="question-topic">@Model.EtapBasligi</span></div>
+                <h2 id="soru-metni">@Model.SoruMetni</h2>
+                @if (!Model.Cevaplandi)
+                {
+                    <p class="question-hint">Doğru olduğunu düşündüğün seçeneği işaretle.</p>
+                    @if (TempData["Hata"] is string hata) { <p class="validation-error" role="alert">@hata</p> }
+                    <form asp-controller="Egitim" asp-action="Cevapla" method="post" class="question-form">
+                        <input type="hidden" name="etapNo" value="@Model.EtapNo" />
+                        <input type="hidden" name="soruId" value="@Model.SoruId" />
+                        <input type="hidden" name="denemeId" value="@Model.DenemeId" />
+                        <fieldset class="answers"><legend class="sr-only">Cevap seçenekleri</legend>
+                            @foreach (var secenek in Model.Secenekler)
+                            {
+                                <label class="answer-option" for="secenek-@secenek.Sira">
+                                    <input type="radio" id="secenek-@secenek.Sira" name="secilenSecenek" value="@secenek.Sira" required />
+                                    <span class="answer-letter">@harfler[secenek.Sira]</span><span class="answer-text">@secenek.Metin</span><span class="answer-dot"></span>
+                                </label>
+                            }
+                        </fieldset>
+                        <div class="question-actions"><span class="action-note"><partial name="_Icon" model='@("bulb")' /> Her cevaptan sonra bir açıklama seni bekliyor.</span><button type="submit" class="button button-primary">Cevabı kontrol et <partial name="_Icon" model='@("arrow")' /></button></div>
+                    </form>
+                }
+                else
+                {
+                    <p class="question-hint">Cevabını incele, ardından sonraki adıma geç.</p>
+                    <div class="answers reviewed" aria-label="Cevabın ve doğru seçenek">
+                        @foreach (var secenek in Model.Secenekler)
+                        {
+                            <div class="answer-option @(secenek.Dogru ? "answer-correct" : secenek.Secildi ? "answer-wrong" : "answer-muted")">
+                                <span class="answer-letter">@harfler[secenek.Sira]</span><span class="answer-text">@secenek.Metin
+                                    @if (secenek.Dogru) { <small>Doğru cevap@(secenek.Secildi ? " · Senin seçimin" : "")</small> }
+                                    else if (secenek.Secildi) { <small>Senin seçimin</small> }
+                                </span>
+                                @if (secenek.Dogru) { <partial name="_Icon" model='@("check")' /> }
+                                else if (secenek.Secildi) { <partial name="_Icon" model='@("close")' /> }
+                            </div>
+                        }
+                    </div>
+                    <div class="answer-feedback @(Model.DogruMu ? "feedback-correct" : "feedback-wrong")" role="status" tabindex="-1" data-feedback>
+                        <span class="feedback-icon"><partial name="_Icon" model='@(Model.DogruMu ? "check" : "bulb")' /></span>
+                        <div><h3>@(Model.DogruMu ? "Doğru bildin!" : "Bir can azaldı, öğrenmeye devam.")</h3><p>@Model.Aciklama</p></div>
+                    </div>
+                    <form asp-controller="Egitim" asp-action="Sonraki" method="post" class="question-actions next-form">
+                        <input type="hidden" name="etapNo" value="@Model.EtapNo" />
+                        <input type="hidden" name="soruId" value="@Model.SoruId" />
+                        <input type="hidden" name="denemeId" value="@Model.DenemeId" />
+                        <span class="action-note">@(Model.DogruMu ? "Yeni bir bilgi, yeni bir adım." : $"{Model.Can} canın var. Hazırsan devam edelim.")</span>
+                        <button type="submit" class="button button-primary">@(Model.SoruNumarasi == 15 ? "Etap sonucunu gör" : "Sonraki soru") <partial name="_Icon" model='@("arrow")' /></button>
+                    </form>
+                }
+            </div>
+            <p class="under-card-note">Her yanlış cevap 1 can götürür. Canların bittiğinde oyun sayfasına geçersin.</p>
+        }
+    </section>
+</div>

@@ -1,0 +1,36 @@
+@model SoruEkraniViewModel
+<aside class="journey" aria-label="Eğitim etapları">
+    <div class="journey-heading"><span class="eyebrow">ÖĞRENME YOLUN</span><span>3 etap</span></div>
+    <div class="journey-list">
+        @foreach (var etap in Model.Etaplar)
+        {
+            string durum = etap.Tamamlandi ? "done" : etap.No == Model.EtapNo ? "active" : etap.Acik ? "open" : "locked";
+            <div class="journey-step @durum">
+                @if (etap.Acik)
+                {
+                    <a asp-controller="Egitim" asp-action="Index" asp-route-etap="@etap.No" class="step-link"
+                       aria-current="@(etap.No == Model.EtapNo ? "step" : null)">
+                        <span class="step-number">
+                            @if (etap.Tamamlandi) { <partial name="_Icon" model='@("check")' /> }
+                            else { <span>@etap.No.ToString("00")</span> }
+                        </span>
+                        <span class="step-copy"><span class="step-meta">@etap.No. KISIM · @etap.Zorluk</span><strong>@etap.Baslik</strong>
+                            <small>@(etap.Tamamlandi ? "Tamamlandı" : $"{etap.Cevaplanan} / 15 soru")</small>
+                        </span>
+                    </a>
+                }
+                else
+                {
+                    <div class="step-link" aria-label="@etap.No. kısım kilitli. Önceki etabı tamamla.">
+                        <span class="step-number"><partial name="_Icon" model='@("lock")' /></span>
+                        <span class="step-copy"><span class="step-meta">@etap.No. KISIM · @etap.Zorluk</span><strong>@etap.Baslik</strong><small>Önceki etabı tamamla</small></span>
+                    </div>
+                }
+            </div>
+        }
+    </div>
+    <div class="journey-tip"><span class="tip-icon"><partial name="_Icon" model='@("bulb")' /></span>
+        <p><strong>Her cevap bir keşif.</strong>Yanlış cevap verdiğinde açıklamayı oku. Sonraki soruya öğrendiklerinle devam et.</p>
+    </div>
+    <p class="session-note">İlerlemen bu tarayıcı oturumunda saklanır.</p>
+</aside>

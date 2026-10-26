@@ -1,0 +1,46 @@
+@model SoruEkraniViewModel
+@{ ViewData["Title"] = "Öğrenmeye başla"; }
+<section class="home-hero">
+    <div class="hero-copy">
+        <span class="pill"><span class="status-dot"></span> BİLGİSAYAR DONANIMI EĞİTİMİ</span>
+        <h1>Bilgisayarını tanı.<br /><span>Adım adım keşfet.</span></h1>
+        <p>Parçaları tanımakla başla, bağlantıları keşfet ve sorunlara çözüm bul. Her etapta yeni bir şey öğren.</p>
+        <a class="button button-primary" asp-controller="Egitim" asp-action="Index">
+            @(Model.Etaplar.Any(e => e.Cevaplanan > 0) ? "Kaldığım yerden devam et" : "Öğrenmeye başla")
+            <partial name="_Icon" model='@("arrow")' />
+        </a>
+        <div class="hero-facts"><span><strong>3</strong> farklı etap</span><span><strong>45</strong> öğretici soru</span><span><strong>5</strong> can / etap</span></div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+        <span class="art-label">BİLGİNİ BİR ÜST SEVİYEYE TAŞI</span>
+        <div class="computer-illustration">
+            <div class="computer-screen"><div class="screen-toolbar"><i></i><i></i><i></i></div>
+                <div class="screen-chip"><partial name="_Icon" model='@("chip")' /></div>
+                <div class="screen-lines"><span></span><span></span><span></span></div>
+            </div><div class="computer-neck"></div><div class="computer-base"></div>
+        </div>
+        <span class="art-float art-float-one"><partial name="_Icon" model='@("check")' /> Yeni bir bilgi!</span>
+        <span class="art-float art-float-two"><partial name="_Icon" model='@("heart")' /> Öğrenmeye devam</span>
+        <div class="art-dots"></div>
+    </div>
+</section>
+<section class="home-stages" aria-labelledby="etap-baslik">
+    <div class="section-heading"><div><span class="eyebrow">SANA ÖZEL ÖĞRENME ROTASI</span><h2 id="etap-baslik">Üç etap, sağlam bir temel.</h2></div><p>Her etabı tamamla, bir sonrakinin kilidini aç.</p></div>
+    <div class="stage-cards">
+        @foreach (var etap in Model.Etaplar)
+        {
+            <article class="stage-card stage-@etap.No @(!etap.Acik ? "stage-card-locked" : "")">
+                <div class="stage-card-top"><span class="stage-card-number">@($"{etap.No}. etap")</span><span class="difficulty difficulty-@etap.No">@etap.Zorluk</span></div>
+                <span class="eyebrow">@etap.No. KISIM</span><h3>@etap.Baslik</h3>
+                <p>@(etap.No == 1 ? "Temel parçalar, görevleri ve giriş-çıkış birimleri." : etap.No == 2 ? "Uyumluluk, yuvalar ve doğru parça bağlantıları." : "Belirtileri yorumla, doğru kontrol adımını belirle.")</p>
+                <div class="stage-card-bottom"><span>15 soru</span>
+                    @if (etap.Acik)
+                    {
+                        <a asp-controller="Egitim" asp-action="Index" asp-route-etap="@etap.No">@(etap.Tamamlandi ? "Sonucu gör" : etap.Cevaplanan > 0 ? "Devam et" : "Başla") <partial name="_Icon" model='@("arrow")' /><span class="sr-only">: @etap.Baslik</span></a>
+                    }
+                    else { <span class="locked-label"><partial name="_Icon" model='@("lock")' /> Kilitli</span> }
+                </div>
+            </article>
+        }
+    </div>
+</section>

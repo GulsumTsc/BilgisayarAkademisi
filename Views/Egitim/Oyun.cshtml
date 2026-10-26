@@ -1,0 +1,18 @@
+@model SoruEkraniViewModel
+@{ ViewData["Title"] = "Can kazanma alanı"; }
+<div class="page-intro"><div><span class="eyebrow">ÖĞRENMEYE BİR MOLA</span><h1>Yeniden denemeye her zaman yer var.</h1><p>Canların bitti. @Model.EtapNo. kısım için can kazanma alanındasın.</p></div></div>
+<div class="learning-layout">
+    <partial name="_Etaplar" model="Model" />
+    <section class="lesson-area">
+        <div class="lesson-topline"><span class="lesson-breadcrumb">@Model.EtapNo. Kısım <span>/</span> <strong>@Model.EtapBasligi</strong></span><span class="difficulty difficulty-@Model.EtapNo">@Model.Zorluk</span></div>
+        <div class="game-panel">
+            <div class="game-panel-header"><div><span class="eyebrow">CAN KAZANMA ALANI</span><h2>Kısa bir oyun, yeni bir başlangıç.</h2></div><partial name="_Kalpler" model="Model.Can" /></div>
+            <div class="game-placeholder">
+                <div class="game-illustration" aria-hidden="true"><span class="floating-part part-one"><partial name="_Icon" model='@("chip")' /></span><span class="floating-part part-two"><partial name="_Icon" model='@("layers")' /></span><span class="game-symbol"><partial name="_Icon" model='@("game")' /></span><span class="game-ground"></span></div>
+                <span class="pill coming-soon">YAKINDA</span><h3>Can kazanma oyunu buraya eklenecek.</h3><p>Bilgisayar parçalarını yakalayacağın mini oyun için bu alanı hazırladık. Şimdilik etabı yeniden deneyebilirsin.</p>
+            </div>
+            <div class="game-last-answer"><span class="tip-icon"><partial name="_Icon" model='@("bulb")' /></span><div><strong>Son sorudan öğrendiğin</strong><p>@Model.Aciklama</p><small>Doğru cevap: @Model.DogruCevap</small></div></div>
+            <div class="game-retry"><div><strong>Bu etapta @Model.DogruSayisi doğru cevap verdin.</strong><p>Yeniden denemede bu etabın cevapları sıfırlanır ve 5 canla başlarsın.</p></div><form asp-controller="Egitim" asp-action="YenidenBaslat" method="post"><input type="hidden" name="etapNo" value="@Model.EtapNo" /><input type="hidden" name="denemeId" value="@Model.DenemeId" /><button class="button button-primary" type="submit">Etabı yeniden dene <partial name="_Icon" model='@("arrow")' /></button></form></div>
+        </div>
+    </section>
+</div>
